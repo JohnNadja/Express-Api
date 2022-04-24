@@ -20,3 +20,11 @@ app.get('/v1/explorers', (req, res) =>{
     const explorers = [explorer1, explorer2, explorer3, explorer4]
     res.status(200).json(explorers)
 })
+
+// GET ID
+app.get('/v1/explorers/:id', (req, res) =>{
+    console.log(`Api Explorers GET request ${new Date()}`)
+    console.log(`Getting explorer with id ${req.params.id}`)
+    const explorer = {id: 1, name: "John"}
+    res.status(200).json(explorer)
+})
