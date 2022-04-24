@@ -44,3 +44,11 @@ app.put('/v1/explorers/:id', (req, res) =>{
     const requestBody = req.body //parámetros de un cliente
     res.status(200).json({message: "Updated"})
 })
+
+// DELETE
+app.delete('/v1/explorers/:id', (req, res)=>{
+    console.log(`Api Explorers PUT request ${new Date()}`)
+    console.log(`Delete explorer with ${req.params.id}`)
+    const requestBody = req.body //parámetros de un cliente
+    res.status(200).json({message: "Deleted"})
+})
